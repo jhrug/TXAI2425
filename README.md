@@ -1,4 +1,4 @@
-# Investigating The Effect of Imbalanced Data on Trusthworthyness and Explainability with the UTKFace dataset.
+# Investigating the effect of Imbalanced data on Trusthworthyness and Explainability with the UTKFace dataset.
 Final project for Trustworthy &amp; Explainable AI
 
 ## Table of Contents
@@ -13,7 +13,12 @@ Final project for Trustworthy &amp; Explainable AI
 ---
 
 ## Project Overview
-This project investigates how an **imbalanced dataset** affects the **trustworthiness** and **explainability** of a deep learning model. We use the **UTKFace dataset**, an unbalanced dataset containing over 20,000 face images labeled by age, gender, and ethnicity—to analyze the impact of imbalance on model performance and interpretability.
+This project investigates how an **imbalanced dataset** affects the **trustworthiness** and **explainability** of a deep learning model. We use the **UTKFace dataset**, an unbalanced dataset containing over 20,000 face images labeled by age, gender, and ethnicity—to analyze the impact of imbalance on model performance and interpretability. We focus on classifying the age group of a person from facial images using deep learning. The model is trained to predict discrete age classes, each representing a 10-year age range (e.g., 20–29, 30–39). To enhance explainability, we:
+- Provide the top 3 predicted age classes along with their associated confidence scores.
+- Experiment with combining multiple predictions to form broader age ranges, aiming to reach at least 90% accuracy.
+- Generate heatmaps that visually highlight the facial regions most influential in the model’s predictions.
+
+This helps evaluate not only the accuracy of predictions, but also the trustworthiness and fairness of the model across different demographic groups.
 
 ### Key Objectives
 - **Evaluate model performance** on imbalanced versus class weighting imbalanced data.
@@ -126,5 +131,5 @@ Large Language Models (LLMs) were used to assist in several small parts of this 
 
 - Assisting with code to generate graphs.
 - Assisting with combining the heatmaps and their predicted outputs into one image.
-- Some assistance with errors in code.
+- Minor assistance with errors in code.
 - Writing a first (with many errors) version of the README.
