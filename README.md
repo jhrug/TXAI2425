@@ -13,7 +13,7 @@ Final project for Trustworthy &amp; Explainable AI
 ---
 
 ## Project Overview
-This project investigates how an **imbalanced dataset** affects the **trustworthiness** and **explainability** of a deep learning model. We use the **UTKFace dataset**, an unbalanced dataset containing over 20,000 face images labeled by age, gender, and ethnicity—to analyze the impact of imbalance on model performance and interpretability. We focus on classifying the age group of a person from facial images using deep learning. The model is trained to predict discrete age classes, each representing a 10-year age range (e.g., 20–29, 30–39). To enhance explainability, we:
+This project investigates how an **imbalanced dataset** affects the **trustworthiness** and **explainability** of a deep learning model. We use the **UTKFace dataset**, an unbalanced dataset containing over 20,000 face images labeled by age, gender, and ethnicity, to analyze the impact of imbalance on model performance and interpretability. We focus on classifying the age group of a person from facial images using deep learning. The model is trained to predict discrete age classes, each representing a 10-year age range (e.g., 20–29, 30–39). To enhance explainability, we:
 - Provide the top 3 predicted age classes along with their associated confidence scores.
 - Experiment with combining multiple predictions to form broader age ranges, aiming to reach at least 90% accuracy.
 - Generate heatmaps that visually highlight the facial regions most influential in the model’s predictions.
