@@ -107,7 +107,8 @@ It is recommended to use a Conda environment to manage dependencies. Follow thes
    - Execute the `training.ipynb` notebook to train the base model on the imbalanced dataset.
 
 4. **Explainability Analysis:**
-   - Use the outputs in `models` and visualizations in `images/prototypes_and_criticisms` to review prototypes and criticisms.
+   - Use the trained models in `evaluation.ipynb` to measure their performance on the test set.
+   - Generate visualizations and review prototypes and criticisms.
    - Evaluate heatmaps and other explainability metrics to determine model trustworthiness.
 
 ---
