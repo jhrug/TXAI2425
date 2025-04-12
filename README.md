@@ -125,4 +125,5 @@ Large Language Models (LLMs) were used to assist in several small parts of this 
 
 - Assisting with code to generate graphs.
 - Assisting with combining the heatmaps and their predicted outputs into one image.
+- Some assistance with errors in code.
 - Writing a first (with many errors) version of the README.
