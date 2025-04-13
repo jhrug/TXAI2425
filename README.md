@@ -53,7 +53,7 @@ The [UTKFace dataset](https://susanqq.github.io/UTKFace/) contains face images t
 ├── models
 │   ├── base_model_trained.h5
 │   ├── best_hyperparameters_balanced.pkl
-│   ├── best_hyperparameters.h5
+│   ├── best_hyperparameters.pkl
 │   ├── class_weight_model_trained.h5
 ├── hyperparameter_tuning
 │   └── (keras-tuner files)
