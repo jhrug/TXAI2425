@@ -53,7 +53,7 @@ The [UTKFace dataset](https://susanqq.github.io/UTKFace/) contains face images t
 ├── models
 │   ├── base_model_trained.h5
 │   ├── best_hyperparameters_balanced.pkl
-│   ├── best_hyperparameters.h5
+│   ├── best_hyperparameters.pkl
 │   ├── class_weight_model_trained.h5
 ├── hyperparameter_tuning
 │   └── (keras-tuner files)
@@ -61,6 +61,7 @@ The [UTKFace dataset](https://susanqq.github.io/UTKFace/) contains face images t
 │── base_model_prototypes_and_criticisms.csv
 ├── data_analysis.ipynb
 ├── training.ipynb
+├── evaluation.ipynb
 ├── requirements.txt
 ├── utils.py
 └── README.md
@@ -86,7 +87,7 @@ It is recommended to use a Conda environment to manage dependencies. Follow thes
 
 1. **Create the Conda environment:**
    ```bash
-   conda create -n utkface_env python=3.11
+   conda create -n utkface_env python=3.10
    ```
 
 2. **Activate the environment:**
