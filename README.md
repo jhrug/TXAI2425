@@ -61,6 +61,7 @@ The [UTKFace dataset](https://susanqq.github.io/UTKFace/) contains face images t
 │── base_model_prototypes_and_criticisms.csv
 ├── data_analysis.ipynb
 ├── training.ipynb
+├── evaluation.ipynb
 ├── requirements.txt
 ├── utils.py
 └── README.md
