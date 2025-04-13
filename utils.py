@@ -187,14 +187,15 @@ def plot_comparison_metric(df_comp_all, metric_base_name, minority_classes_list)
             rects_class_weight[i].set_hatch("//")
 
     metric_title = metric_base_name.replace("-", " ").title()
-    ax.set_ylabel(f"{metric_title} Score")
-    ax.set_title(f"{metric_title} Comparison (Slashed = Minority Class)")
+    ax.set_ylabel(f"{metric_title} Score", fontsize=12)
+    ax.set_xlabel("Age Group", fontsize=12)
+    ax.set_title(f"{metric_title} Comparison (Slashed = Minority Class)", fontsize=14)
     ax.set_xticks(x)
-    ax.set_xticklabels(labels)
-    ax.legend()
+    ax.set_xticklabels(labels, fontsize=11, rotation=45)
+    ax.legend(fontsize=11)
     ax.grid(axis="y", linestyle="--", alpha=0.7)
-    ax.bar_label(rects_base, padding=3, fmt="%.3f", fontsize=8)
-    ax.bar_label(rects_class_weight, padding=3, fmt="%.3f", fontsize=8)
+    ax.bar_label(rects_base, padding=3, fmt="%.3f", fontsize=9)
+    ax.bar_label(rects_class_weight, padding=3, fmt="%.3f", fontsize=9)
 
     fig.tight_layout()
     plt.show()
@@ -272,11 +273,16 @@ def plot_accuracy_comparison_by_group(accuracy_base, accuracy_balanced):
         palette=["skyblue", "lightcoral"],
         height=5,
         aspect=1.2,
-        legend_out=True,
-        order=list(ethnicity_map.values())
-    )
+        legend_out=False,
+        order=list(ethnicity_map.values()))
+    
+    plt.rcParams['axes.titlesize'] = 14
+    plt.rcParams['axes.labelsize'] = 12
+    plt.rcParams['xtick.labelsize'] = 11
+    plt.rcParams['ytick.labelsize'] = 11
+    plt.rcParams['legend.fontsize'] = 12
 
-    g.figure.suptitle("Age Prediction Accuracy by Ethnicity and Gender", y=1.03)
+    g.figure.suptitle("Age Prediction Accuracy by Ethnicity and Gender", y=1.05, fontsize=16)
     g.set_axis_labels("Ethnicity", "Accuracy")
     g.set_titles("{col_name}")
     g.set(ylim=(0, 1.05))
@@ -285,10 +291,22 @@ def plot_accuracy_comparison_by_group(accuracy_base, accuracy_balanced):
     for ax in g.axes.flat:
         ax.grid(axis="y", linestyle="--", alpha=0.7)
         for container in ax.containers:
-            ax.bar_label(container, fmt="%.3f", padding=3)
+            ax.bar_label(container, fmt="%.2f", padding=3, fontsize=11)
 
+    g._legend.remove()
+    g.fig.legend(
+        handles=g.axes.flat[0].get_legend_handles_labels()[0],
+        labels=g.axes.flat[0].get_legend_handles_labels()[1],
+        title="Model:",
+        loc='lower center',
+        bbox_to_anchor=(0.5, -0.05),
+        ncol=2,
+        frameon=True
+    )
+
+    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.15)
     plt.show()
-
 
 def generate_heatmaps_from_sample(gradcam, image_path, label, save_file=None, annotation_text=""):
     image = load_and_preprocess_image(image_path)
