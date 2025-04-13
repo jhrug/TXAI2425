@@ -86,7 +86,7 @@ It is recommended to use a Conda environment to manage dependencies. Follow thes
 
 1. **Create the Conda environment:**
    ```bash
-   conda create -n utkface_env python=3.11
+   conda create -n utkface_env python=3.10
    ```
 
 2. **Activate the environment:**
